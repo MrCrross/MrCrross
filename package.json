@@ -1,0 +1,30 @@
+{
+    "version": "1.0.0",
+    "name": "CrocodileMDK",
+    "app-name": "CrocodileMDK",
+    "package-name": "webview",
+    "project-type": "webview",
+    "icon": "./assets/icon/icon.png",
+    "dist-path": "./dist",
+    "permission": [
+        "android.permission.INTERNET"
+    ],
+    "description": "",
+    "main": "main.js",
+    "scripts": {
+        "start:dev": "node .",
+        "csswatch": "npx tailwindcss -i assets/css/index.css -o assets/css/tailwind.css --watch",
+        "build": "npx tailwindcss -i assets/css/index.css -o assets/css/tailwind.css --minify && androidjs build --release",
+        "android": "androidjs build --release"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "androidjs": "^2.0.2",
+        "tailwindcss": "^2.2.19"
+    },
+    "project-name": "CrocodileMDK",
+    "theme": {
+        "fullScreen": true
+    }
+}
